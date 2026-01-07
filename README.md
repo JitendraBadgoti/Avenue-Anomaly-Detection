@@ -14,7 +14,7 @@ Surveillance anomaly detection often fails due to "identity mapping" (where mode
 
 **Function:** Classifies frames into Normal or Corrupted.
 
-Vital Logic: If a frame is flagged as corrupted, the pipeline applies a $180^\circ$ rotation followed by a horizontal flip. This ensures the prediction model maintains spatial consistency.
+**Vital Logic:** If a frame is flagged as corrupted, the pipeline applies a $180^\circ$ rotation followed by a horizontal flip. This ensures the prediction model maintains spatial consistency.
 ### 2. Temporal Prediction U-Net
 Unlike traditional autoencoders that reconstruct the current frame, this model predicts the future frame.
 
@@ -22,7 +22,7 @@ Unlike traditional autoencoders that reconstruct the current frame, this model p
 
 **Target:** 5th frame prediction (3 channels).
 
-Skip Connections: These are vital for preserving high-resolution background details, allowing the model to focus its capacity on moving objects.
+**Skip Connections:** These are vital for preserving high-resolution background details, allowing the model to focus its capacity on moving objects.
 ### 3. Local Max-Pooling Error Extraction
 Standard MSE loss often "smooths out" small anomalies (like a flying bag).
 
@@ -40,7 +40,7 @@ _Dependencies: PyTorch, Torchvision, Pandas, Scipy, OpenCV, Pillow, Tqdm._
 
      - **Training Stage:** Uncomment train_gatekeeper() and train_unet() in the main block.
 
-Inference: Run run_final_inference() to generate the submission_GOAT_6.csv.
+     - **Inference:** Run run_final_inference() to generate the submission_GOAT_6.csv.
 
 ## Final Metrics
 Post-Processing: Gaussian Smoothing ($\sigma=1.5$) + Score Squaring ($x^2$) for high contrast.
