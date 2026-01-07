@@ -1,0 +1,18 @@
+# Core Deep Learning
+torch
+torchvision
+
+# Data Handling & Math
+numpy
+pandas
+
+# Image & Video Processing
+opencv-python
+Pillow
+
+# Signal Processing & Post-Processing
+scipy
+matplotlib
+
+# Progress Tracking
+tqdm
