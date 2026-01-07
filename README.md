@@ -47,5 +47,5 @@ Post-Processing: Gaussian Smoothing ($\sigma=1.5$) + Score Squaring ($x^2$) for 
 
 ## 📂 Repository Structure
 ├── README.md                 
-├── Avenue_Anomaly_Detection_Notebook.ipynb    
+├── Avenue_Anomaly_Detection.py    
 ├── requirements.txt          
